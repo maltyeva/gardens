@@ -1,0 +1,7 @@
+<%= simple_form_for [@garden, @plant] do |f| %>
+  <%= f.input :name, label: "Please enter a name", autofocus: true %>
+  <%= f.input :color, placeholder: "e.g. blue eggplant", hint: "this is required" %>
+  <%= f.input :size %>
+  <%= f.association :garden, collection: Garden.all %>
+  <%= f.submit %>
+<% end %>

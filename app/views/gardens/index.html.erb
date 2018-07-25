@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+  <div class="banner-content">
+    <h1>Welcome to my garden site </h1>
+    <p>Lets plant some plants</p>
+    <a class="btn btn-primary btn-lg">Start now</a>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <br>
+    <% @gardens.each do |g| %>
+      <div class="col col-xs-12 col-sm-4">
+        <%= render 'card', garden: g %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<%= link_to 'New Garden', new_garden_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @garden.name %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @garden.category %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%= @garden.location %>
+</p>
+<ul><% @garden.plants.each do |p| %>
+    <li> <%= p.color %> <%= p.name %></li>
+  <% end %></ul>
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %>
+<%= link_to 'Create New Plants', new_garden_plant_path(@garden)  %>
